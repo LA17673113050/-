@@ -1,0 +1,42 @@
+<!--pages/title/home/home.wxml-->
+<view class="container">
+
+  <view class="v1">
+    <swiper class="swiper"
+    indicator-dots="true"
+    autoplay="true"
+    interval="2000"
+    circular="true">
+      <swiper-item wx:for="{{swiper}}" wx:key="*this" class="swiper_item">
+        <image src="{{item.picUrl}}"></image>
+      </swiper-item>
+    </swiper>
+    <input class="inp" placeholder="输入搜索关键词"></input>
+    <!-- <image src="./../../../../天使童装/images/icon/search.png" class="input_search"></image> -->
+    <view class="v1_tonggao">
+      <image src="./../../../images/notice.png"></image>
+      <text class="v1_t1">商城新开张，优惠多多，戳 戳 戳 我看详情。</text>
+      <text class="v1_t2">更多></text>
+    </view>
+  </view>
+  <view class="v2">
+    <view class="nav" wx:for="{{category}}" wx:key="*index">
+      <image src="{{item.icon}}"></image>
+      <text>{{item.name}}</text>
+    </view>
+    <view class="v2_baopin">
+      —————— 爆品推荐 ——————
+    </view>
+  </view>
+  <view class="v3">
+    <view wx:for="{{shoplist}}" wx:key="*this" class="shoplist">
+      <image src="{{item.pic}}"></image>
+      <text class="v3_t">{{item.name}}</text>
+      <view class="v3_v">
+        <text>￥{{item.minPrice}}</text>
+        <text>￥{{item.originalPrice}}</text>
+      </view>
+    </view>
+  </view>
+
+</view>

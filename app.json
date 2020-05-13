@@ -1,0 +1,51 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/title/home/home",
+    "pages/title/shopcar/shopcar",
+    "pages/title/my/my",
+
+    "pages/title/classify/classify",
+    "pages/title/classify/search/search",
+    "pages/title/classify/xiang/xiang"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  
+  
+
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#DC143C",
+    "list": [{
+      "pagePath": "pages/title/home/home",
+      "text": "首页",
+      "iconPath": "./../天使童装/images/nav/home-off.png",
+      "selectedIconPath": "./../天使童装/images/nav/home-on.png"
+    },{
+      "pagePath": "pages/title/classify/classify",
+      "text": "分类",
+      "iconPath": "./../天使童装/images/nav/ic_catefory_normal.png",
+      "selectedIconPath": "./../天使童装/images/nav/ic_catefory_pressed.png"
+    },{
+      "pagePath": "pages/title/shopcar/shopcar",
+      "text": "购物车",
+      "iconPath": "./../天使童装/images/nav/cart-off.png",
+      "selectedIconPath": "./../天使童装/images/nav/cart-on.png"
+    },{
+      "pagePath": "pages/title/my/my",
+      "text": "我的",
+      "iconPath": "./../天使童装/images/nav/my-off.png",
+      "selectedIconPath": "./../天使童装/images/nav/my-on.png"
+    }]
+  },
+  "usingComponents": {
+    "van-toast": "@vant/weapp/toast/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-popup": "@vant/weapp/popup/index"
+  }
+}

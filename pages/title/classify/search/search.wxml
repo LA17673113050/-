@@ -1,0 +1,36 @@
+<!--pages/title/classify/search/search.wxml-->
+<view class="container_search">
+
+  <view class="v1">
+      <input placeholder="输入搜索关键词"
+      bindinput="sousuo" value="{{inp}}"
+      bindconfirm="search"></input>
+      <text class="v1_t"></text>
+  </view>
+
+  <view class="v2">
+    <text wx:for="{{xuanze}}" wx:key="*this" class="{{check == index?'active':''}}" bindtap="checked" data-i="{{index}}">
+      {{item}}
+    </text>
+  </view>
+
+  <view class="v3">
+    <view wx:for="{{search_list}}" wx:key="*this" class="search_list">
+      <view class="v3_image">
+        <image src="{{item.pic}}"></image>
+      </view>
+      <view class="v3_txt">
+        {{item.name}}
+      </view>
+      <view class="v3_bottom">
+        <view class="v3_left">
+          <text class="v3_t1">￥{{item.minPrice}}</text>
+          <text class="v3_t2">{{item.numberOrders}}人已购{{item.numberSells}}件</text>
+        </view>
+        <view class="v3_right">
+          <image src="./../../../../images/nav/cart-on.png"></image>
+        </view> 
+      </view>
+    </view>
+  </view>
+</view>

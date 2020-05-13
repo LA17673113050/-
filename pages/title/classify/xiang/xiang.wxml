@@ -1,0 +1,103 @@
+
+<view class="containernk">
+  
+  <view class="v1">
+    <swiper class="v1_swiper"
+    indicator-dots="true"
+    circular="true">
+      <swiper-item wx:for="{{list.pics}}" wx:key="*this" class="images">
+        <image src="{{item.pic}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="v2">
+    <view class="v2_title">
+      {{list.basicInfo.name}}
+    </view>
+    <view class="v2_txt">
+      分享有赏，好友下单后可获得现金奖励
+    </view>
+    <view class="v2_navgit">
+      <view class="Price">
+        <text>￥</text>
+        <text>{{list.basicInfo.minPrice}}</text>
+      </view>
+      <view class="old_Price">
+        <text>￥</text>
+        <text>{{list.basicInfo.originalPrice}}</text>
+      </view>
+      <view class="yidu">
+        {{list.basicInfo.commission}}人已读
+      </view>
+      <view class="fenxiang">
+        <view class="fx_v">
+          <image src="./../../../../images/share/share1.png" bindtap="fenxiang1"></image>
+          <button open-type="share" class="f_x"></button>
+        </view>
+        <view class="fx_v">
+          <image src="./../../../../images/share/share2.png" bindtap="fenxiang2"></image>
+        </view>
+      </view>
+    </view>
+  </view> 
+  <view class="v3">
+    <view class="v3_title">商品介绍</view>
+    <rich-text nodes="{{cont}}" class="v3_ve"></rich-text>
+  </view>
+
+  <view class="footer">
+    <view class="ft_images">
+      <image
+       src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTgwODEwNjczNDc1IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjI0MTMiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48L3N0eWxlPjwvZGVmcz48cGF0aCBkPSJNNTEyIDU2My4yYTE1My42IDE1My42IDAgMSAwIDAtMzA3LjIgMTUzLjYgMTUzLjYgMCAwIDAgMCAzMDcuMnogbTAgNTEuMmEyMDQuOCAyMDQuOCAwIDEgMSAwLTQwOS42IDIwNC44IDIwNC44IDAgMCAxIDAgNDA5LjZ6TTQ4NC45NjY0IDY2NS42YTMxOS4yODMyIDMxOS4yODMyIDAgMCAwLTI4NS41OTM2IDE3Ni40ODY0bC0yOC4yNjI0IDU2LjYyNzJBNTEuMiA1MS4yIDAgMCAwIDIxNi44ODMyIDk3Mi44aDU5MC4yMzM2YTUxLjIgNTEuMiAwIDAgMCA0NS43NzI4LTc0LjA4NjRsLTI4LjI2MjQtNTYuNjI3MkEzMTkuMjgzMiAzMTkuMjgzMiAwIDAgMCA1MzkuMDMzNiA2NjUuNkg0ODQuOTY2NHogbTAtNTEuMmg1NC4wNjcyQTM3MC40ODMyIDM3MC40ODMyIDAgMCAxIDg3MC40IDgxOS4ybDI4LjMxMzYgNTYuNjI3MkExMDIuNCAxMDIuNCAwIDAgMSA4MDcuMDY1NiAxMDI0SDIxNi45MzQ0YTEwMi40IDEwMi40IDAgMCAxLTkxLjU5NjgtMTQ4LjE3MjhMMTUzLjYgODE5LjJhMzcwLjQ4MzIgMzcwLjQ4MzIgMCAwIDEgMzMxLjM2NjQtMjA0Ljh6IiBwLWlkPSIyNDE0IiBmaWxsPSIjMDA4MDAwIj48L3BhdGg+PHBhdGggZD0iTTIwNC44IDUxMnY3OS45MjMybC02OC4yNDk2LTE5LjJhMTI4IDEyOCAwIDAgMSAwLTI0MS40MDhsMjcuOTU1Mi05Ljg4MTZhMzU4LjU1MzYgMzU4LjU1MzYgMCAwIDEgNjk0Ljk4ODggMGwyNy45NTUyIDkuODgxNmExMjggMTI4IDAgMCAxIDAgMjQxLjQwOEw4MTkuMiA1OTEuOTIzMlY0MDkuNkEzMDcuMiAzMDcuMiAwIDEgMCAyMDQuOCA0MDkuNnYxMDIuNHogbTY2NS42LTEzMi40MDMydjE0NC44OTZhNzYuOCA3Ni44IDAgMCAwIDAtMTQ0Ljg5NnogbS03MTYuOCAwYTc2LjggNzYuOCAwIDAgMCAwIDE0NC44OTZ2LTE0NC44OTZ6IiBwLWlkPSIyNDE1IiBmaWxsPSIjMDA4MDAwIj48L3BhdGg+PC9zdmc+"></image>
+      
+
+      <image src="./../../../../images/nav/cart-off.png" bindtap="go_shoplist"></image>
+      <text class="tu2_txt" wx:if="{{shop_sum}}">{{shop_sum}}</text>
+      <!-- 收藏功能 -->
+      <image src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTgzNzY3MTMxMTE5IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjUgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjIxMjgiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjAwLjE5NTMxMjUiIGhlaWdodD0iMjAwIj48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwvc3R5bGU+PC9kZWZzPjxwYXRoIGQ9Ik0xMDIyLjk1NTIxMyAzOTQuNzczMzMzYy0yLjU2LTcuNzQ0LTkuMTczMzMzLTEzLjM3Ni0xNy4yNTg2NjctMTQuNTQ5MzMzTDY3Ny43ODE4OCAzMzIuNTg2NjY3IDUzMS4xNTc4OCAzNS40NzczMzNjLTcuMTY4LTE0LjU5Mi0zMS4xMjUzMzMtMTQuNTkyLTM4LjMxNDY2NyAwTDM0Ni4xOTc4OCAzMzIuNTg2NjY3bC0zMjcuODkzMzMzIDQ3LjYzNzMzM2MtOC4wNDI2NjcgMS4xNzMzMzMtMTQuNzIgNi44MDUzMzMtMTcuMjU4NjY3IDE0LjU0OTMzMy0yLjUxNzMzMyA3LjcyMjY2Ny0wLjQwNTMzMyAxNi4xOTIgNS40MTg2NjcgMjEuODg4bDIzNy4yNjkzMzMgMjMxLjI1MzMzM0wxODcuNzEyNTQ2IDk3NC41MDY2NjdjLTEuMzY1MzMzIDggMS45MiAxNi4wODUzMzMgOC41MTIgMjAuODg1MzMzIDYuNTcwNjY3IDQuNzc4NjY3IDE1LjI5NiA1LjQ0IDIyLjQ4NTMzMyAxLjY0MjY2N0w1MTIuMDAwNTQ2IDg0Mi44MTZsMjkzLjIyNjY2NyAxNTQuMjE4NjY3YzMuMTM2IDEuNjIxMzMzIDYuNTcwNjY3IDIuNDUzMzMzIDkuOTg0IDIuNDUzMzMzIDQuNDM3MzMzIDAgOC44MTA2NjctMS40MDggMTIuNTg2NjY3LTQuMDk2IDYuNTQ5MzMzLTQuNzc4NjY3IDkuODM0NjY3LTEyLjg4NTMzMyA4LjQ5MDY2Ny0yMC44ODUzMzNsLTU2LTMyNi41NDkzMzMgMjM3LjI5MDY2Ny0yMzEuMjk2QzEwMjMuNDI0NTQ2IDQxMC45ODY2NjcgMTAyNS40NTEyMTMgNDAyLjQ5NiAxMDIyLjk1NTIxMyAzOTQuNzczMzMzek03NDIuNDAwNTQ2IDYyNS4xNzMzMzNjLTUuMDEzMzMzIDQuOTA2NjY3LTcuMzYgMTEuOTg5MzMzLTYuMTQ0IDE4LjkyMjY2N2w1MC41ODEzMzMgMjk0Ljk1NDY2Ny0yNjQuODk2LTEzOS4yNjRDNTE4LjgyNzIxMyA3OTguMTIyNjY3IDUxNS40MTM4OCA3OTcuMzEyIDUxMi4wMDA1NDYgNzk3LjMxMnMtNi44NDggMC44MTA2NjctOS45NjI2NjcgMi40NzQ2NjdMMjM3LjE0MTg4IDkzOS4wOTMzMzNsNTAuNTgxMzMzLTI5NC45OTczMzNjMS4xNzMzMzMtNi45MTItMS4xMDkzMzMtMTQuMDE2LTYuMTQ0LTE4LjkyMjY2N0w2Ny4yODU4OCA0MTYuMjc3MzMzbDI5Ni4xOTItNDMuMDI5MzMzYzYuOTU0NjY3LTEuMDAyNjY3IDEyLjk0OTMzMy01LjM5NzMzMyAxNi4wODUzMzMtMTEuNjkwNjY3TDUxMi4wMDA1NDYgOTMuMTg0bDEzMi40NTg2NjcgMjY4LjM1MmMzLjExNDY2NyA2LjMxNDY2NyA5LjA4OCAxMC42ODggMTYuMDY0IDExLjY5MDY2N2wyOTYuMTkyIDQzLjAyOTMzM0w3NDIuNDAwNTQ2IDYyNS4xNzMzMzN6IiBwLWlkPSIyMTI5IiBmaWxsPSIjNzA3MDcwIj48L3BhdGg+PC9zdmc+" 
+      bindtap="SC_wula" wx:if="{{check == 0}}"></image>
+      <image src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTgzNzY4MDg2ODU0IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjUgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjQyMzQiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjAwLjE5NTMxMjUiIGhlaWdodD0iMjAwIj48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwvc3R5bGU+PC9kZWZzPjxwYXRoIGQ9Ik0xMDIyLjk3NjU0NiAzOTQuNzczMzMzYy0yLjU4MTMzMy03Ljc0NC05LjIzNzMzMy0xMy4zNzYtMTcuMjgtMTQuNTQ5MzMzTDY3Ny43ODE4OCAzMzIuNTg2NjY3IDUzMS4xMTUyMTMgMzUuNDc3MzMzYy03LjE2OC0xNC41OTItMzEuMTA0LTE0LjU5Mi0zOC4yNzIgMEwzNDYuMTk3ODggMzMyLjU4NjY2NyAxOC4yODMyMTMgMzgwLjIyNGMtOC4wMjEzMzMgMS4xNzMzMzMtMTQuNzIgNi44MDUzMzMtMTcuMjM3MzMzIDE0LjU0OTMzMy0yLjUxNzMzMyA3LjcyMjY2Ny0wLjQwNTMzMyAxNi4xOTIgNS40MTg2NjcgMjEuODg4bDIzNy4yNjkzMzMgMjMxLjI1MzMzM0wxODcuNzEyNTQ2IDk3NC41MDY2NjdjLTEuMzY1MzMzIDggMS45MiAxNi4wODUzMzMgOC41MTIgMjAuODg1MzMzIDYuNTcwNjY3IDQuNzc4NjY3IDE1LjI5NiA1LjQ0IDIyLjQ4NTMzMyAxLjY0MjY2N0w1MTIuMDAwNTQ2IDg0Mi44MTZsMjkzLjI0OCAxNTQuMjE4NjY3YzMuMTE0NjY3IDEuNjIxMzMzIDYuNTQ5MzMzIDIuNDUzMzMzIDkuOTYyNjY3IDIuNDUzMzMzIDQuNDE2IDAgOC43ODkzMzMtMS40MDggMTIuNTQ0LTQuMDk2IDYuNTkyLTQuNzc4NjY3IDkuODc3MzMzLTEyLjg2NCA4LjUzMzMzMy0yMC44ODUzMzNsLTU2LTMyNi41NDkzMzMgMjM3LjI0OC0yMzEuMjk2QzEwMjMuNDI0NTQ2IDQxMC45ODY2NjcgMTAyNS40NTEyMTMgNDAyLjQ5NiAxMDIyLjk3NjU0NiAzOTQuNzczMzMzeiIgcC1pZD0iNDIzNSIgZmlsbD0iI2U2NDM0MCI+PC9wYXRoPjwvc3ZnPg==" 
+      bindtap="SC_wula" wx:if="{{check == 1}}"></image>
+    </view>
+    <button class="ft_btn1" bindtap="showPopup">加入购物车</button>
+    <button class="ft_btn2">立即购买</button>
+  </view>
+
+  <!-- 轻提示 -->
+  <van-toast id="van-toast"/>
+  <!-- 底部弹出层 -->
+  <van-popup show="{{ show }}"
+  position="bottom"
+  bind:close="onClose" >
+
+    <van-card
+      num="{{sum}}"
+      price="{{list.basicInfo.minPrice}}"
+      origin-price="{{list.basicInfo.originalPrice}}"
+      title="{{list.basicInfo.name}}"
+      thumb="{{ list.basicInfo.pic }}"
+      class="pop"
+      custom-style="height: 100%;"
+    >
+      <view slot="footer">
+        <van-button size="mini" bindtap="jia">+</van-button>
+        <van-button size="mini" bindtap="jian">-</van-button>
+      </view>
+    </van-card>
+    <van-button type="danger" size="large" bindtap="add_shop">加入购物车</van-button>
+
+  </van-popup>
+  <!-- 小程序码遮罩层 -->
+  <van-overlay show="{{ show1 }}" bind:click="onClickHide">
+    <view class="wrapper">
+      <!-- <view class="block" catch:tap="noop" /> -->
+      <view class="unlimit_image">
+        <image src="{{unlimit_img}}"></image>
+        <!-- <button>保存到相册</button> -->
+      </view>
+      
+    </view>
+</van-overlay>
+
+</view>

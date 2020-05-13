@@ -1,0 +1,147 @@
+/* pages/title/classify/classify.wxss */
+.container{
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /*防止左右滑动显示白色区域 */
+  display: flex;
+  flex-direction: column;
+}
+
+.v1{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.v1>input{
+  width: 90%;
+  height: 60%;
+  border: 1rpx solid #ccc;
+  border-radius: 26rpx;
+  padding:0 20rpx;
+  font-size: 28rpx;
+}
+
+.v2{
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-grow: 1;
+}
+.left{
+  width: 25%;
+  height: 100%;
+  overflow-y:auto;
+}
+.left_text{
+  display: block;
+  width: 98%;
+  margin: 0 auto;
+  height: 120rpx;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+.active{
+  border-left: 4rpx solid red;
+  color: red;
+}
+.right{
+  width: 74%;
+  height: 100%;
+}
+.right_list{
+  width: 94%;
+  height: 160rpx;
+  padding: 15rpx 0; 
+  border-bottom: 1rpx solid #ccc;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+  display: flex;
+}
+.right_img{
+  width: 30%;
+  height: 100%;
+  background: yellow;
+}
+.right_img>image{
+  width: 100%;
+  height: 100%;
+}
+.right_value{
+  width: 70%;
+  height: 100%;
+}
+.r_value_top{
+  width: 94%;
+  height: 35%;
+  margin: 0 auto;
+  line-height: 200%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.r_value_bottom{
+  width: 94%;
+  height: 65%;
+  margin: 0 auto;
+  display: flex;
+}
+.r_v_b_top{
+  width: 50%;
+  height: 100%;
+}
+.r_v_b_t_t,.r_v_b_t_b{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+.r_v_b_t_t{
+  color: red;
+}
+.r_v_b_t_b_pop{
+  width: 70%;
+  height: 75%;
+  border: 1rpx solid red;
+  color: red;
+  border-radius: 6rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+}
+
+.r_v_b_bottom{
+  width: 50%;
+  height: 100%;
+}
+.r_v_b_b_img{
+  width: 100%;
+  height: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.r_v_b_b_img>image{
+  width: 30%;
+  height: 65%;
+}
+.r_v_b_b_poe{
+  width: 100%;
+  height: 35%;
+  font-size: 22rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.zanwu{
+  color: #bbb;
+  font-size: 38rpx;
+  text-align: center;
+  padding-top: 30rpx;
+}

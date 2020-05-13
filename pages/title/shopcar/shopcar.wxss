@@ -1,0 +1,18 @@
+/* pages/title/shopcar/shopcar.wxss */
+.no_login{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.del{
+  background: red;
+  width: 201%;
+  height: 100%;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+

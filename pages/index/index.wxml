@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper class="swiper">
+    <swiper-item>
+      <image src="{{list[6].picUrl}}"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="{{list[7].picUrl}}"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="{{list[8].picUrl}}"></image>
+      <button bindtap="gohome">进入店铺</button>
+    </swiper-item>
+  </swiper>
+</view>

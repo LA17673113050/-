@@ -1,0 +1,183 @@
+/* pages/title/classify/xiang/xiang.wxss */
+.containernk{
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #ddd;
+}
+.v1{
+  width: 100%;
+  height: 650rpx;
+}
+.v1_swiper,.v1_swiper>.images{
+  width: 100%;
+  height: 100%;
+}
+.images>image{
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+.v2{
+  width: 100%;
+  padding-bottom: 20rpx;
+  background: white;
+}
+.v2_title{
+  font-size: 34rpx;
+  padding: 20rpx;
+}
+.v2_txt{
+  color: red;
+  font-size: 24rpx;
+  padding: 10rpx 20rpx;
+}
+.v2_navgit{
+  display: flex;
+  align-items: center;
+}
+.Price{
+  margin-left: 20rpx;
+}
+.Price>text:nth-of-type(1){
+  font-size: 26rpx;
+  color: red;
+}
+.Price>text:nth-of-type(2){
+  font-size: 44rpx;
+  color: red;
+}
+.old_Price{
+  margin-left: 5rpx;
+}
+.old_Price>text{
+  font-size: 28rpx;
+  color: #ccc;
+}
+.yidu{
+  font-size: 28rpx;
+  color: #ccc;
+  margin-left: 20rpx;
+}
+.fenxiang{
+ display: flex; 
+ flex: 1;
+ justify-content: flex-end;
+ position: relative;
+}
+.f_x{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 0rpx;
+  left: 350rpx;
+  z-index: 1;
+  opacity: 0;
+}
+.fx_v>image{
+  width: 50rpx;
+  height: 50rpx;
+  display: block;
+  margin-right: 15rpx;
+  /* z-index: 10; */
+}
+
+.v3{
+  margin-top: 20rpx;
+  background: white;
+  padding-bottom: 100rpx;
+}
+.v3_title{
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+  background: white;
+  text-indent: 20rpx;
+}
+.img-ks-lazyload{
+  width: 100%;
+}
+
+.footer{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: white;
+  display: flex;
+}
+.ft_images{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.ft_images>image{
+  width: 22%;
+  height: 60%;
+  display: block;
+}
+.ft_btn1,.ft_btn2{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  color: white;
+}
+.ft_btn1{
+  background: rgb(230, 117, 31);
+}
+.ft_btn2{
+  background: rgb(245, 39, 39);
+}
+.tu2_txt{
+  width: 40rpx;
+  height: 40rpx;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 4.8%;
+  left: 52%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pop{
+  border: 1rpx solid red;
+}
+.wrapper {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  height: 100%;
+}
+.unlimit_image{
+  width: 75%;
+  height: 40%;
+  background: white;
+  margin-top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+}
+.unlimit_image>image{
+  width: 90%;
+  height: 90%;
+}
+/* .block {
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+} */
+

@@ -1,0 +1,59 @@
+<!--pages/title/classify/classify.wxml-->
+<view class="container">
+
+  <view class="v1">
+    <input placeholder="输入搜索关键词"
+    bindinput="sousuo" value="{{inp}}"
+    bindconfirm="search"></input>
+  </view>
+
+  <view class="v2">
+    <view class="left">
+      <text wx:for="{{left_list}}" wx:key="*index" 
+      bindtap="active"
+      data-i="{{index}}"
+      data-id="{{item.id}}"
+      class="left_text {{index==check?'active':''}}"> 
+        {{item.name}}
+      </text>
+    </view>
+    <view class="right">
+      <view class="right_list" wx:for="{{right_list}}" 
+      wx:key="*this" 
+      wx:if="{{isshow}}"
+      bindtap="xiangqing"
+      data-val="{{item}}">
+        <view class="right_img">
+          <image src="{{item.pic}}"></image>
+        </view>
+        <view class="right_value">
+          <view class="r_value_top">
+            {{item.name}}
+          </view>
+          <view class="r_value_bottom">
+            <view class="r_v_b_top">
+              <view class="r_v_b_t_t">
+                ￥{{item.minPrice}}
+              </view>
+              <view class="r_v_b_t_b">
+                <view class="r_v_b_t_b_pop">已售{{item.numberSells}}件</view>
+              </view>
+            </view>
+            <view class="r_v_b_bottom">
+              <view class="r_v_b_b_img">
+                <image src="./../../../images/nav/cart-on.png"></image>
+              </view>
+              <view class="r_v_b_b_poe">
+                评分 +{{item.weight}}积分
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{isshow == false}}" class="zanwu">
+        暂无此类数据
+      </view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,152 @@
+/* pages/title/home/home.wxss */
+.container{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: #eee;
+  overflow: hidden;
+}
+
+.v1{
+  width: 100%;
+  height: 400rpx;
+  position: relative;
+}
+.swiper{
+  width: 100%;
+  height: 400rpx;
+}
+.swiper_item,.swiper_item>image{
+  width: 100%;
+  height: 100%;
+}
+.inp{
+  width: 85%;
+  height: 70rpx;
+  background: rgba(255,255,255,0.7);
+  position: absolute;
+  border-radius: 30rpx;
+  top: 7%;
+  left: 5%;
+  padding-left: 5%;
+}
+.input_search{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 8.5%;
+  left: 83%;
+  background: red;
+}
+.v1_tonggao{
+  width: 100%;
+  height: 65rpx;
+  border-bottom: 1rpx solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 6rpx 1.5%;
+}
+.v1_tonggao>image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.v1_t1{
+  font-size: 25rpx;
+  color: red;
+  width: 75%;
+}
+.v1_t2{
+  font-size: 25rpx;
+  color: rgb(135, 134, 134);
+  width: 13%;
+}
+
+.v2{
+  width: 100%;
+  height: 380rpx;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-top: 65rpx;
+  padding: 40rpx 0 0rpx;
+  background: white;
+}
+.nav{
+  width: 20%;
+  height: 150rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav>image{
+  width: 65%;
+  height: 80rpx;
+  display: block;
+  margin: 0 auto;
+}
+.nav>text{
+  font-size: 27rpx;
+  width: 100%;
+  height: 60rpx;
+  display: block;
+  text-align: center;
+  line-height: 60rpx;
+}
+.v2_baopin{
+  width: 100%;
+  height: 40rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  text-align: center;
+  color: rgb(101, 99, 99);
+}
+
+.v3{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 20rpx;
+}
+.shoplist{
+  width: 45%;
+  height: 500rpx;
+  margin: 20rpx 0 0 3%;
+  background: white;
+  border-radius: 8rpx;
+}
+.shoplist>image{
+  width: 100%;
+  height: 75%;
+  margin: 0;
+  padding: 0;
+}
+.v3_t{
+  display: block;
+  width: 92%;
+  height: 10%;
+  margin: 0 auto;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  margin-top: 3%;
+  font-size: 26rpx;
+}
+.v3>text{
+  display: flex;
+  align-items: center;
+  font-size: 22rpx;
+}
+.v3_v{
+  width: 100%;
+  height: 10%;
+  margin-top: 2%;
+  padding: 0 20rpx;
+}
+.v3_v>text:first-child{
+  color: red;
+}
+.v3_v>text:last-child{
+  color: #ccc;
+  text-decoration: line-through;
+  margin-left: 35%;
+}
