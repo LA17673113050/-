@@ -34,14 +34,14 @@ App({
         }
       }
     })
-    wx.setTabBarBadge({
-      index: 2,
-      text:'2',
-    })
+    // wx.setTabBarBadge({
+    //   index: 2,
+    //   text:""+this.globalData.sum+"",
+    // })
   },
   globalData: {
     userInfo: null,
     apiBase:'https://api.it120.cc/wula',
-    sum:10
+    sum:''
   },
 })

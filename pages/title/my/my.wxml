@@ -1,2 +1,128 @@
 <!--pages/title/my/my.wxml-->
-<text>pages/title/my/my.wxml</text>
+<view class="container">
+  <view class="v1">
+    <!-- 头像 -->
+    <view class="v1_img">
+      <image src="{{userInfo.avatarUrl}}"></image>
+      <text>username:{{userInfo.nickName}}</text>
+    </view>
+    <!-- 头像下面四个方块 -->
+    <view class="v1_four">
+      <view>
+        <text>{{user_price.balance}}</text>
+        <text>余额</text>
+      </view>
+      <view>
+        <text>{{user_price.freeze}}</text>
+        <text>冻结</text>
+      </view><view>
+        <text>{{user_price.growth}}</text>
+        <text>积分</text>
+      </view><view>
+        <text>{{user_price.score}}</text>
+        <text>成长值</text>
+      </view>
+    </view>
+  </view>
+  <view class="v2">
+    <!-- 我的订单 -->
+    <van-cell
+      is-link
+      title="我的订单"
+      link-type="navigateTo"
+      url="/pages/dashboard/index"
+    />
+    <view class="v2_v">
+      <van-grid column-num="5">
+        <van-grid-item icon="balance-pay" text="待付款" />
+        <van-grid-item icon="completed" text="待发货" />
+        <van-grid-item icon="logistics" text="待收货" />
+        <van-grid-item icon="flower-o" text="待评价" />
+        <van-grid-item icon="after-sale" text="售后" />
+      </van-grid>
+    </view>
+    <van-cell
+      is-link
+      title="优惠买单"
+      link-type="navigateTo"
+      url="/pages/dashboard/index"
+    />
+    <van-cell
+      is-link
+      title="资金明细"
+      link-type="navigateTo"
+      url="/pages/dashboard/index"
+    />
+  </view>
+  <view class="v2">
+    <van-cell
+      is-link
+      title="成为分销商"
+      link-type="navigateTo"
+      url="/pages/dashboard/index"
+    />
+  </view>
+  <view class="v2">
+    <van-cell
+      is-link
+      title="申请发票"
+      link-type="navigateTo"
+      url="/pages/dashboard/index"
+    />
+    <van-cell
+      is-link
+      title="发票记录"
+      link-type="navigateTo"
+      url="/pages/dashboard/index"
+    />
+  </view>
+  <view class="v2">
+    <van-cell
+      is-link
+      title="收货地址"
+      link-type="navigateTo"
+      url="./addres/addres"
+    />
+    <van-cell
+      is-link
+      title="领券中心"
+      link-type="navigateTo"
+      url="/pages/dashboard/index"
+    />
+    <van-cell
+      is-link
+      title="我的收藏"
+      link-type="navigateTo"
+      url="/pages/dashboard/index"
+    />
+  </view>
+  <view class="v2">
+    <van-cell
+      is-link
+      title="每日签到"
+      link-type="navigateTo"
+      url="/pages/dashboard/index"
+    />
+    <van-cell
+      is-link
+      title="积分券兑换积分"
+      link-type="navigateTo"
+      url="/pages/dashboard/index"
+    />
+    <van-cell
+      is-link
+      title="积分兑换成长值"
+      link-type="navigateTo"
+      url="/pages/dashboard/index"
+    />
+  </view>
+  <view class="v2">
+    <van-cell
+      is-link
+      title="关于我们"
+      link-type="navigateTo"
+      url="/pages/dashboard/index"
+    />
+    <van-cell title="绑定手机" value="立即绑定" />
+  </view>
+</view>

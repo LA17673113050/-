@@ -5,7 +5,7 @@
 
 <view wx:else class="yes_login">
   <!-- 有数据 -->
-  <view wx:if="{{list.length != ''}}">
+  <view wx:if="{{list != ''}}">
     <van-swipe-cell right-width="{{ 65 }}" wx:for="{{list}}" wx:key="*this" class="shop">
       <van-card
           num="{{item.number}}"
@@ -32,6 +32,8 @@
   
   <!-- 没数据 -->
   <view wx:if="{{list == ''}}">购物车空空如也</view>
+
+
   <!-- 轻提示 -->
   <van-toast id="van-toast" />
 </view>

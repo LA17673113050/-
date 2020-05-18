@@ -1,0 +1,16 @@
+/* pages/title/shopcar/ding/ding.wxss */
+.container{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.v1{
+  width: 100%;
+
+}
+.v1_list{
+  background: white;
+  border-top: 1rpx solid #ccc;
+}

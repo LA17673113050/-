@@ -95,5 +95,28 @@ module.exports = {
   set_shopsum:(data) => {
     return request('/shopping-cart/modifyNumber','true','post',data)
   },
-
+  //用户资产
+  user_price:(data) => {
+    return request('/user/amount','true','get',data)
+  },
+  //新增收货地址
+  add_dizhi:(data) => {
+    return request('/user/shipping-address/add','true','post',data)
+  },
+  //获取收货地址
+  get_dizhi:(data) => {
+    return request('/user/shipping-address/list','true','get',data)
+  },
+  // 获取地址详情
+  get_dizhi_xiang:(data) => {
+    return request('/user/shipping-address/detail/v2','true','get',data)
+  },
+  //修改地址
+  set_dizhi:(data) => {
+    return request('/user/shipping-address/update','true','post',data)
+  },
+  //删除地址
+  del_dizhi:(data) => {
+    return request('/user/shipping-address/delete','true','post',data)
+  },
 }

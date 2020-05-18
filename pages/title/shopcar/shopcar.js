@@ -15,6 +15,7 @@ Page({
   },
   
   onLoad: function (options) {
+    // console.log(options)
     
     //判断是否登录并存储登录信息
     let User = wx.getStorageSync('token')
@@ -23,11 +24,15 @@ Page({
         user:true
       })
       this.getlist()
+      
     }else{
       this.setData({
         user:false
       })
     }
+  },
+  onShow:function(){
+    this.getlist()
   },
   onReady:function(){
     this.getlist()
@@ -72,19 +77,29 @@ Page({
   getlist(){
     var tk = wx.getStorageSync('token')
     apifm.shoplist({token:tk}).then((res) => {
-      // console.log(res.data)
-      var sum = 0;
-      var s = 0;
-      res.data.items.forEach((item) => {
-        sum += item.price*item.number
-        s += item.number
-      })
-      this.setData({
-        list:res.data.items,
-        sum:sum
-      })
-      app.globalData.sum = s
-      console.log(app.globalData.sum)
+      console.log(res.data)
+      if(res.data){
+        var sum = 0;
+        var s = 0;
+        res.data.items.forEach((item) => {
+          sum += item.price*item.number
+          s += item.number
+        })
+        this.setData({
+          list:res.data.items,
+          sum:sum
+        })
+        wx.setTabBarBadge({
+          index: 2,
+          text:""+s+"",
+        })
+      }else{
+        this.setData({
+          list:[],
+          sum:0
+        })
+      }
+      
     })
   },
   //删除
@@ -106,6 +121,9 @@ Page({
       if(res.code == 700){
         this.setData({
           list:[]
+        })
+        wx.removeTabBarBadge({
+          index: 2,
         })
       }
     })
@@ -130,13 +148,25 @@ Page({
     }).then((res) => {
       // console.log(res)
       var sum = 0;
+      var s = 0;
       res.data.items.forEach((item) => {
-        sum += item.price*item.number
+        sum += item.price*item.number;
+        s += item.number
       })
       this.setData({
         list:res.data.items,
         sum:sum
       })
+      wx.setTabBarBadge({
+        index: 2,
+        text:""+s+"",
+      })
+    })
+  },
+  //提交订单
+  onClickButton(){
+    wx.navigateTo({
+      url: './ding/ding',
     })
   }
 })

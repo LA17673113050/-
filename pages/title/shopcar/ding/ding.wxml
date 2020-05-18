@@ -1,0 +1,13 @@
+<!--pages/title/shopcar/ding/ding.wxml-->
+<view class="container">
+  <view class="v1">
+    <view class="v1_list" wx:for="{{list}}" wx:key="*this">
+      <van-card
+        num="{{item.number}}"
+        price="{{item.price}}"
+        title="{{item.name}}"
+        thumb="{{ item.pic }}"
+      />
+    </view>
+  </view>
+</view>

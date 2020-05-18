@@ -1,0 +1,102 @@
+<!--pages/title/my/addres/add_addres/add_addres.wxml-->
+<view class="container">
+  <view class="v1">
+    <van-cell title="获取微信收货地址" is-link />
+  </view>
+
+  <view class="v2"></view>
+
+  <view class="v3">
+    <van-cell title="省份" is-link bind:click="showPopup1" bindchange="bindPickerChange1">
+      {{sheng_txt}}
+      <picker bindchange="bindPickerChange1" value="{{index1}}" range="{{arr1}}">
+        <view class="picker_1">
+          {{arr1[index1]}}
+        </view>
+      </picker>
+    </van-cell>
+
+    <van-cell title="市级" is-link bind:click="showPopup2" bindchange="bindPickerChange2" wx:if="{{check_shi}}">
+      {{sheng_txt}}
+      <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{arr2}}">
+        <view class="picker_1">
+          {{arr2[index2]}}
+        </view>
+      </picker>
+    </van-cell>
+
+    <van-cell title="区级" is-link bind:click="showPopup3" bindchange="bindPickerChange3" wx:if="{{check_qu}}">
+      {{sheng_txt}}
+      <picker bindchange="bindPickerChange3" value="{{index3}}" range="{{arr3}}">
+        <view class="picker_1">
+          {{arr3[index3]}}
+        </view>
+      </picker>
+    </van-cell>
+
+    <van-cell-group>
+      <van-field
+        value="{{ name }}"
+        type="text"
+        clearable="true"
+        label="收件人"
+        icon="user-o"
+        placeholder="请输入收件人"
+        bind:click-icon="onClickIcon"
+        bind:blur="blur_1"
+        maxlength="11"
+      />
+    </van-cell-group>
+    <van-cell-group>
+      <van-field
+        value="{{ tel }}"
+        type="tel"
+        clearable="true"
+        label="电话"
+        icon="phone-o"
+        placeholder="请输入电话"
+        bind:click-icon="onClickIcon"
+        bind:blur="blur_2"
+        maxlength="11"
+        error="{{tel_if}}"
+        error-message="{{tel_msg}}"
+      />
+    </van-cell-group>
+    <van-cell-group>
+      <van-field
+        value="{{ xiangxi }}"
+        label="详细地址"
+        type="textarea"
+        placeholder="请输入您的详细地址(50字以内)"
+        autosize
+        border="{{ false }}"
+        clearable="true"
+        icon="comment-o"
+        maxlength="50"
+        bind:blur="blur_3"
+      />
+    </van-cell-group>
+
+    <van-cell-group>
+      <van-cell title="设置为默认收货地址">
+        <van-switch checked="{{ set_moren }}" bind:change="set_moren" size="24px"/>
+      </van-cell>
+    </van-cell-group>
+  </view>
+  
+
+  <van-button type="primary" size="large" class="btn_ok" bindtap="btn_ok">确认添加</van-button>
+  
+  <van-dialog id="van-dialog" />
+  <!-- 弹出层-省 -->
+  <!-- <van-popup
+    show="{{ show1 }}"
+    position="bottom"
+    custom-style="height: 40%;"
+    bind:close="onClose1"
+  >
+    
+  </van-popup> -->
+
+
+</view>

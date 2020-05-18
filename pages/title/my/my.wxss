@@ -1,1 +1,69 @@
 /* pages/title/my/my.wxss */
+.container{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #eee;
+}
+
+.v1{
+  width: 100%;
+  height: 400rpx;
+  background: white;
+}
+.v1_img{
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.v1_img>image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  display: block;
+}
+.v1_img>text{
+  font-size: 30rpx;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.v1_four{
+  width: 100%;
+  height: 30%;
+  display: flex;
+}
+.v1_four>view{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  /* background: yellow; */
+}
+.v1_four>view>text{
+  display: block;
+  width: 100%;
+  height: 50%;
+  border-right: 1rpx solid #ccc;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  
+}
+.v1_four>view>text:nth-of-type(1){
+  line-height: 250%;
+}
+
+.v2{
+  width: 100%;
+  margin-top: 15rpx;
+}
+.v2_v{
+  width: 100%;
+  height: 150rpx;
+}

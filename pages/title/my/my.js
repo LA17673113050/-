@@ -1,18 +1,42 @@
 // pages/title/my/my.js
+const WXAPI = require('./../../../utils/apifm')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    userInfo:null,
+    token:wx.getStorageSync('token'),
+    user_price:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.setNavigationBarTitle({
+      title: '会员中心',
+    })
+    //获取用户头像和用户名
+    wx.getUserInfo({
+      success: (res) => {
+        // console.log(res)
+        this.setData({
+          userInfo:res.userInfo
+        })
+      },
+    })
+    if(!this.data.token){
+      alert('您还未登录')
+    }else{
+      WXAPI.user_price({token:this.data.token}).then((res) => {
+        console.log(res)
+        this.setData({
+          user_price:res.data
+        })
+      })
+    }
   },
 
   /**

@@ -1,0 +1,30 @@
+<!--pages/title/my/addres/addres.wxml-->
+<view class="container">
+  <view class="box">
+
+    <view class="v1" wx:for="{{list}}" wx:key="*this">
+      <view class="v1_v1">
+        <view>
+          <text>{{item.linkMan}}</text>
+          <text>{{item.mobile}}</text>
+        </view>
+        <view>
+          {{item.address}}11111vesvsebdrbdrbRBS
+        </view>
+      </view>
+      <view class="v1_v2">
+        <van-icon name="edit" size="30" bindtap="xiugai" data-val="{{item.id}}"/>
+      </view>
+    </view>
+
+  </view>
+  <view class="footer"> 
+    <van-cell
+      is-link
+      icon="add-o"
+      title="新增收货地址"
+      link-type="navigateTo"
+      url="./add_addres/add_addres"
+    />
+  </view>
+</view>
